@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  background-color: #ffd62c;
+  color: #000;
+  transition: background-color 0.3s, color 0.3s;
+  line-height: 1.6;
+  font-size: 20px;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffd62c;
+}
+
+#toggle-theme {
+  position: fixed;
+  top: 100px;
+  right: 50px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+body.dark-mode #toggle-theme {
+  background-color: #333;
+  color: #f1f1f1;
+}
+body.dark-mode h1 {
+  color: #ffd62c;
+}
+img {
+  width: 300px;
+  right: 200px;
+  margin-left: 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.2s;
+  height: 65px;
+  align-content: center;
+  text-align: center;
+  width: 100px;
+  
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  background-color: #ffd62c;
+  position: sticky;
+  margin: auto;
+  font-size: 17px;
+  font-family: cursive;
+  }
+
+  .navbar a:hover {
+  color: #000000;
+  transform: scale(1.5);
+  background-color: #ffffff;
+   }
+
+
+   .pedido-btn {
+    background-color: #00bb10;
+    border-radius: 5px;
+    color: #ffffff;
+    margin-right:20px;
+    padding: 1px;
+   
+    
+  }
+
+    #primeiro{
+    text-align: center;
+
+    font-family: cursive;
+
+
+      }
+
+
+     img:hover{
+
+        transform: translateX(5px) scale(1.1) rotate(0deg);
+        transform: translateY(5px) scale(1.1) rotate(0deg);
+      } 
+          
+         
+
+          #segundo{
+            text-align: center;
+            margin: 25px;
+            font-family: cursive;
+          }
+
+          
+
+          div{
+            align-items: center;
+            text-align: center;
+         
+          }
+
+        .pin{
+          width: 30px;
+          
+          
+        }
+          
+        .logo{
+         
+          width: 200px;
+        
+        
+        
+        }
+       
+
+         #pu {
+
+          border: 5px solid rgb(255, 0, 0);
+          border-radius: 10px;
+          max-width:500px;
+          background-color: red;
+          text-align: center;
+          margin: auto;
+          font-family: cursive; 
+          
+          
+          
+        }
+        #box{
+          margin: auto;
+          font-family: cursive;
+          padding: 20px;
+        }
+        #box  a:hover{
+          color:black;
+          font-family: cursive;
+
+        }
+
+        nav{
+        margin-bottom: 120px;
+        margin-left: 450px;
+       
+        }
+
+        h4{
+          color: rgb(211, 7, 7);
+            
+        }
+        
+        .localização{
+          color: #ffd62c;
+          font-family: cursive;
+        }
+       
+        
+        
+          

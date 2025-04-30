@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cardapio.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="comidas/logoh.png" alt="logo">
+      </div>
+      <button id="toggle-theme">🌙 Modo Escuro</button>
+      <a href="index.html">Home</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="burgerday.html">BurguerDay</a>
+      <a href="unidade.html">Unidade</a>
+      <a href="https://pedido.anota.ai/loja/sarytwo-burger-1?f=msa" class="pedido-btn">Peça Aqui!</a>
+    </nav>
+  </header>
+
+  <header class="text-center py-4 bloco-vermelho">
+    <div class="container">
+      <div class="nome">
+        <h1>CARDÁPIO</h1>
+      </div>
+      <nav class="d-flex justify-content-center border-bottom border-dark flex-wrap navegacao-menu">
+        <a href="#comidas" class="mx-3">COMIDAS</a>
+        <a href="#bebidas" class="mx-3">BEBIDAS</a>
+        <a href="#combos" class="mx-3">COMBOS</a>
+      </nav>
+    </div>
+  </header>
+
+  <div id="confirmacao" class="confirmacao-overlay d-none">
+    <div class="confirmacao-box">
+      <h3>Confirmar Pedido</h3>
+      <ul id="resumo-pedido" class="list-group my-3"></ul>
+      <p class="fw-bold">Total: <span id="confirmar-total">R$0,00</span></p>
+      <button class="btn btn-success" onclick="confirmarPedido()">Confirmar</button>
+      <button class="btn btn-secondary mt-2" onclick="fecharConfirmacao()">Cancelar</button>
+    </div>
+  </div>
+
+  <main class="container my-5">
+    
+    <section id="comidas"></section>
+    <section id="bebidas"></section>
+    <section id="combos"></section>
+
+    <div class="pedido-section">
+      <h2>Seus Pedidos</h2>
+      <p id="aviso" class="text-black" style="display: none;">Adicione itens ao pedido antes de continuar.</p>
+      <ul id="lista-pedidos" class="list-group mb-3"></ul>
+      <h4>Total: <span id="total">R$0.00</span></h4>
+      
+      <div id="botoes-confirmacao" style="display: none; gap: 10px;" class="d-flex mt-3">
+        <button class="btn btn-success" onclick="finalizarPedido()">Finalizar Pedido</button>
+        <button class="btn btn-secondary" onclick="cancelarPedido()">Cancelar</button>
+      </div>
+    </div>
+
+    <button onclick="scrollToTop()" class="btn btn-dark position-fixed bottom-0 end-0 m-3">Topo</button>
+  </main>
+
+  <script src="script.js"></script>
+  <footer>
+    <div id="footer_content">
+      <div id="footer_contatos">
+        <h1>SARYTWO</h1>
+        <p>Felicidade é comer bem</p>
+        <div id="footer_redes_sociais">
+          <a href="https://www.instagram.com/sarytwoburger?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="footer-link" id="instagram">
+            <i class="fa-brands fa-square-instagram"></i>
+          </a>
+          <a href="https://api.whatsapp.com/message/VNMAN6DVPMYXA1?autoload=1&app_absent=0" class="footer-link" id="whatsapp">
+            <i class="fa-brands fa-square-whatsapp"></i>
+          </a>
+          <a href="https://pedido.anota.ai" class="footer-link" id="anotai">
+            <i class="fa-solid fa-burger"></i>
+          </a>
+        </div>
+      </div>
+      <ul class="footer-list">
+        <li>
+          <h3>Produtos</h3>
+        </li>
+        <li> <a href="/cardapio.html" class="footer-link">Cardápio</a></li>
+        <li> <a href="/burgerday.html" class="footer-link">Burgerday</a></li>
+        <li> <a href="/unidade.html" class="footer-link">Unidade</a></li>
+      </ul>
+      <ul class="footer-list">
+        <li>
+          <h3>Top 3 Burgers</h3>
+        </li>
+        <li> <a href="https://pedido.anota.ai/product/67c5dda3103496be03d36e5c/0/sarytwo-burger-1" class="footer-link">VEI</a></li>
+        <li> <a href="https://pedido.anota.ai/product/67c5dda3103496be03d36e5d/0/sarytwo-burger-1" class="footer-link">Miserê</a></li>
+        <li> <a href="https://pedido.anota.ai/product/67c5dda3103496be03d36e61/0/sarytwo-burger-1" class="footer-link">Talarico</a></li>
+      </ul>
+     
+      
+    </div>
+    <div id="footer_copyright">
+      &#169
+      2025 all rights reserved
+    </div>
+  </footer>
+</script>
+<script>const toggleButton = document.getElementById('toggle-theme');
+
+  toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+  
+    // Trocar o texto do botão
+    if (document.body.classList.contains('dark-mode')) {
+      toggleButton.textContent = '☀️ Modo Claro';
+    } else {
+      toggleButton.textContent = '🌙 Modo Escuro';
+    }
+  });</script>
+</body>
+</html>

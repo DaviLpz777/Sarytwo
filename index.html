@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SARYTWO BURGUER</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="footer.css">
+  
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logoh.png" alt="logo">
+      </div>
+      <button id="toggle-theme">🌙 Modo Escuro</button>
+      <a href="index.html">Home</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="burgerday.html">BurguerDay</a>
+      <a href="unidade.html">Unidade</a>
+      <a href="https://pedido.anota.ai/loja/sarytwo-burger-1?f=msa" class="pedido-btn">Peça Aqui!</a>
+    </nav>
+  </header>
+<div class="flex">
+  <div id="boas">
+    <h1>SARYTWO BURGUER! <br> <BR> A NÚMERO 1 DE BROTAS🥇</h1>
+      <div class="carousel-container">
+        <button class="arrow-btn" onclick="mudarSlide(-1)">&#10094;</button>
+    
+        <div class="carousel">
+          <img src="homeimg/hamburguer.png" class="active" alt="Imagem 1">
+          <img src="homeimg/hamburguer2.png" alt="Imagem 2">
+          <img src="homeimg/hamburguer3.png" alt="Imagem 3">
+        </div>
+    
+        <button class="arrow-btn" onclick="mudarSlide(1)">&#10095;</button>
+      </div>
+    
+  </div>
+  <div id="desinghorarios">
+    <p class="texto1">HORÁRIO DE FUNCIONAMENTO</p><br>
+    <p class="texto1">TERÇA A QUINTA</p>
+    <p class="horario">16H ÁS 23H</p> <br>
+    <p class="texto1">SEXTA E SABADO</p>
+    <p class="horario">16H ÁS 0H</p> <br>
+    <p class="texto1">DOMINGO</p>
+    <p class="horario">17H ÁS 22H</p>
+  </div>
+</div>
+
+
+<script>
+  const imagens = document.querySelectorAll(".carousel img");
+  let indiceAtual = 0;
+  let intervalo;
+
+  function mostrarSlide(index) {
+    imagens.forEach((img, i) => {
+      img.classList.remove("active");
+      if (i === index) {
+        img.classList.add("active");
+      }
+    });
+  }
+
+  function mudarSlide(direcao) {
+    indiceAtual += direcao;
+    if (indiceAtual < 0) indiceAtual = imagens.length - 1;
+    if (indiceAtual >= imagens.length) indiceAtual = 0;
+    mostrarSlide(indiceAtual);
+    resetarAutoplay();
+  }
+
+  function iniciarAutoplay() {
+    intervalo = setInterval(() => {
+      mudarSlide(1);
+    }, 5000);
+  }
+
+  function resetarAutoplay() {
+    clearInterval(intervalo);
+    iniciarAutoplay();
+  }
+
+  iniciarAutoplay();
+</script>
+  <script>const toggleButton = document.getElementById('toggle-theme');
+
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    
+      // Trocar o texto do botão
+      if (document.body.classList.contains('dark-mode')) {
+        toggleButton.textContent = '☀️ Modo Claro';
+      } else {
+        toggleButton.textContent = '🌙 Modo Escuro';
+      }
+    });</script>
+
+
+
+
+<div class="form-container" id="formDadosPessoais">
+  <h2 class="form-title">Cadastro de Dados Pessoais</h2>
+  <form action="#" method="post" id="formCadastro">
+
+    <div class="form-group">
+      <label for="nome" class="form-label">Nome Completo:</label>
+      <input type="text" id="nome" name="nome" class="form-input" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email" class="form-label">E-mail:</label>
+      <input type="email" id="email" name="email" class="form-input" required>
+    </div>
+
+    <div class="form-group">
+      <label for="telefone" class="form-label">Telefone:</label>
+      <input type="number" id="telefone" name="telefone" class="form-input" pattern="[0-9]{10,11}" placeholder="(71) xxxx-xxxx" required>
+    </div>
+
+    <div class="form-group">
+      <label for="cpf" class="form-label">CPF:</label>
+      <input type="number" id="cpf" name="cpf" class="form-input" pattern="\d{11}" placeholder="Apenas números" required>
+    </div>
+
+    <div class="form-group">
+      <label for="rg" class="form-label">RG:</label>
+      <input type="number" id="rg" name="rg" class="form-input" required>
+    </div>
+
+    <div class="form-group">
+      <label for="sexo" class="form-label">Sexo:</label>
+      <select id="sexo" name="sexo" class="form-select" required>
+        <option value="">Selecione</option>
+        <option value="masculino">Masculino</option>
+        <option value="feminino">Feminino</option>
+        <option value="outro">Outro</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="nascimento" class="form-label">Data de Nascimento:</label>
+      <input type="date" id="nascimento" name="nascimento" class="form-input" required>
+    </div>
+
+    <div class="form-group">
+      <label for="endereco" class="form-label">Endereço:</label>
+      <textarea id="endereco" name="endereco" class="form-textarea" rows="3" required></textarea>
+    </div>
+
+    <button type="submit" class="form-button" id="botaoEnviar">Enviar</button>
+  </form>
+</div>
+
+
+<div class="imga">
+  <img src="logoh.png" alt="log">
+</div>
+
+
+
+    <footer>
+      <div id="footer_content">
+        <div id="footer_contatos">
+          <h1>SARYTWO</h1>
+          <p>Felicidade é comer bem</p>
+          <div id="footer_redes_sociais">
+            <a href="https://www.instagram.com/sarytwoburger?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="footer-link" id="instagram">
+              <i class="fa-brands fa-square-instagram"></i>
+            </a>
+            <a href="https://api.whatsapp.com/message/VNMAN6DVPMYXA1?autoload=1&app_absent=0" class="footer-link" id="whatsapp">
+              <i class="fa-brands fa-square-whatsapp"></i>
+            </a>
+            <a href="https://pedido.anota.ai" class="footer-link" id="anotai">
+              <i class="fa-solid fa-burger"></i>
+            </a>
+          </div>
+        </div>
+        <ul class="footer-list">
+          <li>
+            <h3>Produtos</h3>
+          </li>
+          <li> <a href="/cardapio.html" class="footer-link">Cardápio</a></li>
+          <li> <a href="/burgerday.html" class="footer-link">Burgerday</a></li>
+          <li> <a href="/unidade.html" class="footer-link">Unidade</a></li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <h3>Top 3 Burgers</h3>
+          </li>
+          <li> <a href="https://pedido.anota.ai/product/67c5dda3103496be03d36e5c/0/sarytwo-burger-1" class="footer-link">VEI</a></li>
+          <li> <a href="https://pedido.anota.ai/product/67c5dda3103496be03d36e5d/0/sarytwo-burger-1" class="footer-link">Miserê</a></li>
+          <li> <a href="https://pedido.anota.ai/product/67c5dda3103496be03d36e61/0/sarytwo-burger-1" class="footer-link">Talarico</a></li>
+        </ul>
+       
+        
+      </div>
+      <div id="footer_copyright">
+        &#169
+        2025 all rights reserved
+      </div>
+    </footer>
+</body>
+</html>

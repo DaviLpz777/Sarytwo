@@ -1,0 +1,111 @@
+/* Footer */
+footer{
+  @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+  font-family: 'inter' sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  width: 100%;
+  color: #ffffff;
+  position: relative;
+}
+#footer_content{
+  background-color: #171717;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 3rem 3.5rem;
+}
+#footer_contatos h1{
+  margin-bottom: 0.75rem;
+}
+#footer_redes_sociais{
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+footer_redes_sociais .footer-link:hoover{
+  opacity: 0.8;
+}
+footer_redes_sociais .footer-link i{
+  font-size: 1.25rem;
+}
+footer_redes_sociais .footer-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  color: #ddd;
+  border-radius: 80%;
+  transition: all 4s;
+}
+#instagram{
+  background: linear-gradient(#7f37c9, #ff2992,#ff9807);
+}
+#whatsapp{
+  background-color: #25d366;
+}
+#anotai{
+  background-color: #0327ca
+}
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+ 
+}
+.footer-list .footer-link{
+  color: #807b7b;
+  text-decoration: none;
+}
+.footer-list .footer-link:hoover{
+  color: #7f37c9;
+  transition: all 4s;
+}
+#footer-subscribe{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+#footer-subscribe p{
+  color: #807b7b;
+}
+#input_group{
+  display: flex;
+  align-items: center;
+  background-color: #ffff;
+  border-radius: 4px;
+}
+#input_group input{
+  all: unset;
+  padding: 0.75rem;
+  width: 100%;
+}
+#input_group button{
+  background-color: #7f37c9;
+  border: none;
+  color: #807b7b;
+  padding: 0 1.25rem;
+  font-size: 1.125rem;
+  height: 100%;
+  border-radius: 0px 4px 4px 0px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+#input_group button:hoover{
+  opacity: 0.8;
+}
+#footer_copyright{
+  display: flex;
+  justify-content: center;
+  background-color: #171717;
+  color: #807b7b;
+  font-size: 0.9rem;
+  padding: 1.5rem;
+  font-weight: 100;
+}
+  a {
+    color: #000000;
+  }
